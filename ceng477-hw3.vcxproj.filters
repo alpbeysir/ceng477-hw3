@@ -18,7 +18,7 @@
     <ClInclude Include="wrapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Shader.h">
+    <ClInclude Include="shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -26,18 +26,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Shader.cpp">
+    <ClCompile Include="shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="example_text.cpp">
+    <ClCompile Include="text.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="text.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="example_diffuse.shader">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="simple_unlit.shader">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="example_text.shader">

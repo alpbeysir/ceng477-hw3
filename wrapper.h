@@ -9,6 +9,7 @@
 #include "glew.h"
 #include <glm/glm.hpp>
 #include <glm/ext/matrix_transform.hpp>
+#include "shader.h"
 
 #define BUFFER_OFFSET(i) ((char*)NULL + (i))
 

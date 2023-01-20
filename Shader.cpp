@@ -1,6 +1,5 @@
-#include "Shader.h"
+#include "shader.h"
 #include <glew.h>
-
 #include <iostream>
 #include <fstream>
 #include <sstream>

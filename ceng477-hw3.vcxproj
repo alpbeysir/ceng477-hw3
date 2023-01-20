@@ -132,18 +132,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Shader.h" />
+    <ClInclude Include="shader.h" />
     <ClInclude Include="wrapper.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="example_text.cpp" />
+    <ClCompile Include="text.cpp" />
+    <ClCompile Include="text.h" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="example_diffuse.shader" />
     <None Include="example_text.shader" />
-    <None Include="simple_unlit.shader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

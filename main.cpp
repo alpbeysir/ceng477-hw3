@@ -4,7 +4,8 @@
 #include <GL/gl.h> 
 #include <glfw3.h> 
 
-#include "Shader.h"
+#include "text.h"
+#include "shader.h"
 #include "wrapper.h"
 
 using namespace std;
@@ -49,13 +50,17 @@ int main()
     glOrtho(-10, 10, -10, 10, -20, 20);
 
     ModelData model = load_model("bunny.obj");
+    FontData font = load_font("LiberationSans.ttf");
     Shader shader("example_diffuse.shader");
+    Shader text_shader("example_text.shader");
 
     glfwSetKeyCallback(window, keyboard);
 
     while (!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        draw_text(font, text_shader, "CENG477", glm::vec2(-10, -10), 0.03f, { 1, 0, 0 });
         
         float dist = 2.0f;
         glm::vec3 scale = glm::vec3(std::min(1.0f, 0.3f * dist));
