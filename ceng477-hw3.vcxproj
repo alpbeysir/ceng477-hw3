@@ -132,16 +132,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="grid.h" />
     <ClInclude Include="shader.h" />
     <ClInclude Include="wrapper.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="grid.cpp" />
     <ClCompile Include="text.cpp" />
     <ClCompile Include="text.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="shader.cpp" />
+    <ClCompile Include="wrapper.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="background.shader" />
     <None Include="example_diffuse.shader" />
     <None Include="example_text.shader" />
   </ItemGroup>

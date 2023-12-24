@@ -21,6 +21,9 @@
     <ClInclude Include="shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -35,12 +38,21 @@
     <ClCompile Include="text.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="example_diffuse.shader">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="example_text.shader">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="background.shader">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

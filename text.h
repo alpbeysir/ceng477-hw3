@@ -2,7 +2,7 @@
 #define _TEXT_H_
 
 #include <map>
-#include "shader.h"
+#include "Shader.h"
 
 using namespace std;
 
@@ -20,6 +20,6 @@ struct FontData
 };
 
 FontData load_font(const std::string& filename);
-void draw_text(const FontData& font, Shader& shader, const std::string& text, glm::vec2 position, float scale, const glm::vec3 color);
+float draw_text(const FontData& font, Shader& shader, const std::string& text, glm::vec2 position, float scale, const glm::vec3 color);
 
 #endif

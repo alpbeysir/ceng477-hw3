@@ -1,8 +1,9 @@
 #include "text.h"
 #include <iostream>
-#include <glew.h>  
+#include <GL/glew.h>
 #include <glm/glm.hpp>
 #include <ft2build.h>
+
 
 #include FT_FREETYPE_H
 
@@ -55,7 +56,7 @@ FontData load_font(const std::string& filename)
             texture,
             glm::ivec2(face->glyph->bitmap.width, face->glyph->bitmap.rows),
             glm::ivec2(face->glyph->bitmap_left, face->glyph->bitmap_top),
-            face->glyph->advance.x
+            (unsigned)face->glyph->advance.x
         };
         font.chars.insert(std::pair<GLchar, Character>(c, character));
     }
@@ -77,8 +78,9 @@ FontData load_font(const std::string& filename)
     return font;
 }
 
-void draw_text(const FontData& font, Shader& shader, const std::string& text, glm::vec2 position, float scale, const glm::vec3 color)
+float draw_text(const FontData& font, Shader& shader, const std::string& text, glm::vec2 position, float scale, const glm::vec3 color)
 {
+    auto pos_copy = position;
     shader.Bind();
     shader.SetUniformVec3f("textColor", color);
     glActiveTexture(GL_TEXTURE0);
@@ -113,4 +115,5 @@ void draw_text(const FontData& font, Shader& shader, const std::string& text, gl
     }
 
     glBindTexture(GL_TEXTURE_2D, 0);
+    return position.x - pos_copy.x;
 }
